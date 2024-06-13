@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    font-family: "Rubik";
+    margin: 0;
+    padding: 0;
+    /* background-color: rgba(161, 161, 161, 0.89); */
+}
+.devzur_cart-container{
+    background-color: #ffffff;
+    width: 400px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    border-left: 1px solid #80808050;
+}
+.devzur_cart-heading-p1{
+    font-size: 20px;
+    font-weight: 450;
+}
+.devuzr_cart-heading-close{
+    display: flex;
+    align-items: center;
+}
+.devzur_cart-heading{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #a7a7a7;
+}
+.devzur_cart-item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #8080803d;
+    font-size: 14px;
+}
+.devzur_cart-item-img img{
+    width: 90px;
+    margin: 8px;
+}
+.devzur_counter-container{
+    display: flex;
+    /* gap: 6px; */
+}
+.counter-value{
+    border-top: 1px solid rgb(207, 207, 207);
+    border-bottom: 1px solid rgb(207, 207, 207);
+    /* padding: 5px 1px; */
+    align-items: center;
+}
+.counter-button-1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 15px;
+    border: 1px solid #80808075;
+    background-color: #ffffff00;
+    font-size: 18px;
+    font-weight: 300;
+}
+.counter-button-2{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 15px;
+    border: 1px solid #80808075;
+    background-color: #ffffff00;
+    font-size: 18px;
+    font-weight: 300
+}
+.counter-value{
+    padding: 6px 16px;
+}
+.devzur_cart-item-count{
+    font-size: 14px;
+}
+.devzur_cart-item-count-color{
+    color: #cc0c4c;
+}
+.devuzr_details-flex{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    align-items: center;
+}
+.devzur_subtotal-container{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    border-bottom: 2px solid #8080803d;
+    margin-bottom: 30px;
+}
+.devzur_cart-checkout{
+    text-align: center;
+}
+.devzur_cart-checkout a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #cc0c4c;
+    text-align: center;
+    padding: 10px 80px;
+    border-radius: 16px;
+    margin-top: 100px;
+
+}
+.devzur_cart-checkout a:hover{
+    color:#cc0c4c;
+    background-color: #f1f1f1d8;
+    border-bottom: 1px solid #8080807c;
+}
