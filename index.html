@@ -7,32 +7,48 @@
     <title>Cart Page</title>
 </head>
 <body>
-    <div class="devzur_cart-container">
+    <header>
+        <nav class="shark_nav">
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)">
+                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                </svg>
+            </label>
+            <label class="logo">
+                <img src="images/logo.png" alt="">
+            </label>
+            <ul class="nav-ul">
+                <li><a href="#" id="cart-icon"><box-icon name='shopping-bag'></box-icon></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#devzur_categories-link">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="devzur_cart-container" id="cart-container">
         <div class="devzur_cart-heading">
-            <p class="devzur_cart-heading-p1">Shoping Cart</p>
-            <div class="devuzr_cart-heading-close">
+            <p class="devzur_cart-heading-p1">Shopping Cart</p>
+            <div class="devuzr_cart-heading-close" id="cart-close">
                 <box-icon name='x' size='md'></box-icon>
                 <p>Close</p>
             </div>
         </div>
+        <!-- Cart items go here -->
         <div class="devzur_cart-items">
             <div class="devzur_cart-item">
                 <div class="devzur_cart-item-img">
                     <img src="images/item.jpeg" alt="">
                 </div>
                 <div class="devzur_cart-item-details">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.
-                    </p>
+                    <p class="devzur_cart-item-details-p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.</p>
                     <div class="devuzr_details-flex">
                         <div class="devzur_counter-container">
                             <button class="counter-button-1" onclick="decreaseCount()">-</button>
                             <div id="counter" class="counter-value">0</div>
                             <button class="counter-button-2" onclick="increaseCount()">+</button>
                         </div>
-                        <p class="devzur_cart-item-count">
-                            1 x <span class="devzur_cart-item-count-color">$5.91</span>
-                        </p>
+                        <p class="devzur_cart-item-count">1 x <span class="devzur_cart-item-count-color">$5.91</span></p>
                     </div>
                 </div>
                 <div class="devzur_cart-item-dlt">
@@ -44,18 +60,14 @@
                     <img src="images/item.jpeg" alt="">
                 </div>
                 <div class="devzur_cart-item-details">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.</p>
                     <div class="devuzr_details-flex">
                         <div class="devzur_counter-container">
                             <button class="counter-button-1" onclick="decreaseCount()">-</button>
                             <div id="counter" class="counter-value">0</div>
                             <button class="counter-button-2" onclick="increaseCount()">+</button>
                         </div>
-                        <p class="devzur_cart-item-count">
-                            1 x <span class="devzur_cart-item-count-color">$5.91</span>
-                        </p>
+                        <p class="devzur_cart-item-count">1 x <span class="devzur_cart-item-count-color">$5.91</span></p>
                     </div>
                 </div>
                 <div class="devzur_cart-item-dlt">
@@ -67,18 +79,14 @@
                     <img src="images/item.jpeg" alt="">
                 </div>
                 <div class="devzur_cart-item-details">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia rerum unde labore delectus harum.</p>
                     <div class="devuzr_details-flex">
                         <div class="devzur_counter-container">
                             <button class="counter-button-1" onclick="decreaseCount()">-</button>
                             <div id="counter" class="counter-value">0</div>
                             <button class="counter-button-2" onclick="increaseCount()">+</button>
                         </div>
-                        <p class="devzur_cart-item-count">
-                            1 x <span class="devzur_cart-item-count-color">$5.91</span>
-                        </p>
+                        <p class="devzur_cart-item-count">1 x <span class="devzur_cart-item-count-color">$5.91</span></p>
                     </div>
                 </div>
                 <div class="devzur_cart-item-dlt">
@@ -88,16 +96,13 @@
         </div>
         <div class="devzur_subtotal-container">
             <p>Subtotal:</p>
-            <p>
-                <span class="devzur_cart-item-count-color">$12.56</span>
-            </p>
+            <p><span class="devzur_cart-item-count-color">$12.56</span></p>
         </div>
         <div class="devzur_cart-checkout">
             <a href="#">Proceed to Checkout</a>
             <p></p>
         </div>
     </div>
-
     <script src="script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>

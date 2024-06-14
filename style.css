@@ -1,57 +1,201 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body{
+body {
     font-family: "Rubik";
     margin: 0;
     padding: 0;
-    /* background-color: rgba(161, 161, 161, 0.89); */
+    margin-top: 100px;
+
+    align-items: center;
 }
-.devzur_cart-container{
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Navbar CSS */
+.shark_nav {
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.411);
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    z-index: 9990;
+}
+
+label.logo img {
+    width: 90px;
+    padding-top: 4px;
+}
+
+.shark_nav ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+.shark_nav ul li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.shark_nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.checkbtn {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .nav-ul {
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #17ca3e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        border-top: 1px solid #000000;
+        z-index: 9990;
+    }
+
+    .shark_nav ul {
+        flex-direction: column;
+        padding-top: 20px;
+        z-index: 9990;
+    }
+
+    .shark_nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .shark_nav ul li a {
+        font-size: 20px;
+        font-weight: bolder;
+        padding: 7px 5px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #95ff1b;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .logo-container {
+        order: 2;
+    }
+
+    .checkbtn {
+        order: 1;
+    }
+
+    label.logo img {
+        margin-left: 0px;
+    }
+
+    .shark_nav ul li a {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* Cart Container CSS */
+.devzur_cart-container {
     background-color: #ffffff;
     width: 400px;
     align-items: center;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     height: 100%;
     overflow-y: auto;
     z-index: 1000;
     border-left: 1px solid #80808050;
+    margin-top: 80px; /* Adjusted to align with the navbar */
+    padding-top: 10px;
+    transition: right 0.5s ease;
 }
-.devzur_cart-heading-p1{
+
+.devzur_cart-container.show {
+    right: 0;
+}
+
+.devzur_cart-heading-p1 {
     font-size: 20px;
     font-weight: 450;
 }
-.devuzr_cart-heading-close{
+
+.devuzr_cart-heading-close {
     display: flex;
     align-items: center;
+    text-align: center;
+    cursor: pointer;
 }
-.devzur_cart-heading{
+
+.devzur_cart-heading {
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #a7a7a7;
 }
-.devzur_cart-item{
+
+.devzur_cart-item {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #8080803d;
     font-size: 14px;
 }
-.devzur_cart-item-img img{
+.devzur_cart-item-details-p1{
+    margin-top: 10px;
+}
+.devzur_cart-item-img img {
     width: 90px;
     margin: 8px;
 }
-.devzur_counter-container{
+
+.devzur_counter-container {
     display: flex;
-    /* gap: 6px; */
 }
-.counter-value{
+
+.counter-value {
     border-top: 1px solid rgb(207, 207, 207);
     border-bottom: 1px solid rgb(207, 207, 207);
-    /* padding: 5px 1px; */
     align-items: center;
 }
-.counter-button-1{
+
+.counter-button-1 {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px 15px;
@@ -60,7 +204,8 @@ body{
     font-size: 18px;
     font-weight: 300;
 }
-.counter-button-2{
+
+.counter-button-2 {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 5px 15px;
@@ -69,45 +214,50 @@ body{
     font-size: 18px;
     font-weight: 300
 }
-.counter-value{
+
+.counter-value {
     padding: 6px 16px;
 }
-.devzur_cart-item-count{
+
+.devzur_cart-item-count {
     font-size: 14px;
 }
-.devzur_cart-item-count-color{
+
+.devzur_cart-item-count-color {
     color: #cc0c4c;
 }
-.devuzr_details-flex{
+
+.devuzr_details-flex {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
     align-items: center;
+    margin-top: 10px;
 }
-.devzur_subtotal-container{
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
-    gap: 100px;
-    border-bottom: 2px solid #8080803d;
-    margin-bottom: 30px;
-}
-.devzur_cart-checkout{
-    text-align: center;
-}
-.devzur_cart-checkout a{
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #cc0c4c;
-    text-align: center;
-    padding: 10px 80px;
-    border-radius: 16px;
-    margin-top: 100px;
 
+.devzur_subtotal-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    margin-bottom: 15px;
 }
-.devzur_cart-checkout a:hover{
-    color:#cc0c4c;
-    background-color: #f1f1f1d8;
-    border-bottom: 1px solid #8080807c;
+
+.devzur_cart-checkout {
+    display: flex;
+    justify-content: center;
+}
+
+.devzur_cart-checkout a {
+    border-radius: 20px;
+    padding: 13px 70px;
+    background-color: #cc0c4c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.devzur_cart-checkout p {
+    text-align: center;
 }

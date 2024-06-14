@@ -11,3 +11,17 @@ function decreaseCount() {
         document.getElementById('counter').innerText = count;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartContainer = document.getElementById('cart-container');
+    const cartClose = document.getElementById('cart-close');
+
+    cartIcon.addEventListener('click', function() {
+        cartContainer.classList.toggle('show');
+    });
+
+    cartClose.addEventListener('click', function() {
+        cartContainer.classList.toggle('show');
+    });
+});
